@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware' # добавлено при развертывании на Heroku
+    'whitenoise.middleware.WhiteNoiseMiddleware' # добавлено при развертывании на Heroku. Включение в конфиrурацию Django пакета WhiteNoise на локальном компьютере в PyCham,
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -128,9 +128,7 @@ USE_TZ = True
 # это базовое расположение URL, из которого будут загружены статические файлы (например, на CDN). Этот параметр также
 # используется для переменной статического шаблона, доступ к которому осуществляется в нашем базовом шаблоне
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 
 
 # Default primary key field type
@@ -160,4 +158,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Упрощенная обработка статическая файлов.
 # https://warehouse.python.org/project/whitenoise/
+# мы можем уменьшить размер статических файлов при их обслужива­
+# нии на внешнем сайте (это повысит эффективность его работы)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
