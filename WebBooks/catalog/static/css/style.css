@@ -1,0 +1,48 @@
+#.sidebar-nav {margin-top: 80px;  padding-left: 30; padding-right: 30; list-style: none; font-size: 20pt;}
+
+
+body {margin: 0;}
+
+.header {-ms-flex: 0 0 98%; flex: 0 0 100%;width: 98%; padding: 0px; margin: 0; background: #7caeb4; margin: 1%}
+.footer {width: 98%; padding: 0px; margin: 0; background: #7caeb4; margin: 1%}
+.container {display: -ms-flexbox; display: flex; flex-wrap: wrap; width: 100%; height: auto; align-items: stretch;  }
+.aside, .main { width: 100%; min-height: 1px; background: #7caeb4;}
+
+@media (min-width: 992px) {
+                         .aside {flex: 0 0 33.333333%; max-width: 33.333333%; order: 1;background: #7caeb4;}
+                         .main {flex: 0 0 66.666667%; max-width: 66.666667%; order: 2; background: #7caeb4;}
+                           }
+
+@media (min-width: 1400px) {
+                            .aside {flex: 1 0 15%; max-width: 25%; background: #7caeb4; margin-right: 10px}
+                            .main {flex: 3 0 60%; max-width: 75%; background: #7caeb4; margin-left: 10px}
+                           }
+
+.fon_bg {background: linear-gradient(to top, black, 20%, cyan); height: auto;}
+
+html {height: 100%; width: 100%;}
+.multi-repeating-linear {
+  background:
+      repeating-linear-gradient(190deg, rgba(255, 0, 0, 0.5) 40px,
+        rgba(255, 153, 0, 0.5) 80px, rgba(255, 255, 0, 0.5) 120px,
+        rgba(0, 255, 0, 0.5) 160px, rgba(0, 0, 255, 0.5) 200px,
+        rgba(75, 0, 130, 0.5) 240px, rgba(238, 130, 238, 0.5) 280px,
+        rgba(255, 0, 0, 0.5) 300px) no-repeat,
+      repeating-linear-gradient(-190deg, rgba(255, 0, 0, 0.5) 30px,
+        rgba(255, 153, 0, 0.5) 60px, rgba(255, 255, 0, 0.5) 90px,
+        rgba(0, 255, 0, 0.5) 120px, rgba(0, 0, 255, 0.5) 150px,
+        rgba(75, 0, 130, 0.5) 180px, rgba(238, 130, 238, 0.5) 210px,
+        rgba(255, 0, 0, 0.5) 230px) no-repeat,
+      repeating-linear-gradient(23deg, red 50px, orange 100px,
+        yellow 150px, green 200px, blue 250px,
+        indigo 300px, violet 350px, red 370px)
+         no-repeat}
+
+
+# body {background: linear-gradient(to right, black, white)}
+# body {background: radial-gradient(circle, black, white);}
+# body {background-image: url("images/nubex.jpg");}
+
+# img.background {min-height: 100%;min-width: 640px;width: 100%;height: auto;position: fixed;top: 0;left: 0;
+# @media screen and (max-width: 640px){img.bg {left: 50%;margin-left: -320px;}}}
+
